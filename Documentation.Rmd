@@ -1,0 +1,57 @@
+---
+title: "Calorie Burned"
+author: "Parminder Singh"
+date: "April 17, 2016"
+output: html_document
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+We have made a shiny app to calculate the calories burned by a person depending on this activity for that day. 
+
+Your calorie burn is the sum of three components:
+
+##*Basal Metabolic Rate (BMR) - 
+This is how many calories your body burns at rest. Even while you rest, your respiratory system is operating, digestive system, and other body processes that require energy (i.e. burn calories). Your BMR represents roughly 65% of your total calorie burn.
+
+##*Activity Level - 
+This is how many calories you burn that requires physical movement, or when your body is in motion. The more active you are, the more calories you will burn. Activity level represents roughly 20% of calorie burn, which depends on how active you are of course.
+
+##*Thermic Effect of Food - 
+Digesting food requires energy, but typically the thermic effect of food only adds up to about 10% of the total amount of calories you burn.
+
+##Data Collected to calculate Calorie Burn
+
+*Age
+*Gender
+*Height
+*Weight
+*Activity
+
+##Calorie Burn Equations
+
+###Harris Benedict Method
+
+BMR Men: = 66 + (6.23 X weight in pounds) + (12.7 X height in inches) - (6.8 X age)
+
+BMR Women: = 655 + (4.35 X weight in pounds) + (4.7 X height in inches) - (4.7 X age)
+
+##Activity Multiplier
+(Both HB + KA Method use same activity multiplier)
+
+Harris Benedict Formula To determine your total daily calorie needs, multiply your BMR by the appropriate activity factor, as follows:
+
+1. If you are sedentary (little or no exercise): Calorie-Calculation = BMR x 1.2
+
+2. If you are lightly active (light exercise/sports 1-3 days/week): Calorie-Calculation = BMR x 1.375
+
+3. If you are moderately active (moderate exercise/sports 3-5 days/week): Calorie-Calculation = BMR x 1.55
+
+4. If you are very active (hard exercise/sports 6-7 days a week): Calorie-Calculation = BMR x 1.725
+
+5. If you are extra active (very hard exercise/sports & physical job or 2x training): Calorie-Calculation = BMR x 1.9
+
+
